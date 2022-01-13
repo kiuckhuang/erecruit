@@ -1,0 +1,1 @@
+../experimenter/logout.php

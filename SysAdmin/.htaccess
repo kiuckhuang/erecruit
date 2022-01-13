@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "ERecruit PHP system"
+AuthUserFile /valid/path/.htpasswd
+
+<Limit GET POST >
+require  user admin
+</Limit>

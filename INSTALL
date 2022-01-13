@@ -1,0 +1,50 @@
+eRecruit: experiment recruitment and management system
+======================================================
+
+Basic Requirements
+------------------
+
+1. A Unix/Linux Box
+2. Apache Web Server (http://www.apache.org)
+3. PHP (http://www.php.net)
+4. MySQL database server (http://www.mysql.com)
+
+
+Installing the Package
+----------------------
+
+1. put the source package to the web directory, then:
+   tar -zxvf erecruit.tar.gz
+
+2. Change to the "fun/" directory and there is a file called "erecruit.sql"
+   this file contains the commands to build the database structure,
+   tables and the default data.
+
+   i.   Create a database called, for example, erecruit:
+ 
+        mysqladmin create erecruit
+
+   ii.  Now fill the databases with the tables in nuke.sql file:
+ 
+        mysql erecruit < erecruit.sql
+  
+   iii. If you have phpMyAdmin installed, better to use phpMyAdmin
+        to create the database and import the data.
+
+3. modify fun/mysql.inc.php, and set the correct value:
+   ----------------------------------------
+  	var $databaseType = 'mysql';
+	var $databaseName = 'erecruit';
+	var $hostname = 'localhost';
+	var $username = 'erecruit';	
+	var $password = 'dbpasswd';
+   ----------------------------------------	
+
+4. modify fun/config.inc about some global parameter
+
+5. for directories with .htaccess, set the correct .htpasswd path
+   for SysAdmin directory, the username:password is admin:erecruit
+
+
+6. now open a browser and go:
+   http://yourdomain.com/index.html

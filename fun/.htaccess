@@ -1,0 +1,5 @@
+AuthUserFile /dev/null
+AuthName noLogin
+AuthType Basic
+KrbAuthRealm NYU.EDU
+require valid-user
